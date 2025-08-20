@@ -1,4 +1,4 @@
-# Spring Boot MyBatis Example
+# SpringBoot MyBatis Example
 
 This project is a simple showcase of using MyBatis with Spring Boot. It demonstrates how to use both annotation-based and XML-based MyBatis mappings for basic CRUD operations on a `User` entity.
 
