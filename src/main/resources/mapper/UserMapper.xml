@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="sorravit.example.springbootmybatisexample.mapper.UserMapper">
+    <update id="updateUserName">
+        UPDATE user
+        SET name = #{name}
+        WHERE id = #{id}
+    </update>
+<!--Try change it to SELECT * FROM user where id = 1 , then you'll see how it effects List all users endpoint -->
+    <select id="getAllUsers" resultType="sorravit.example.springbootmybatisexample.model.User">
+        SELECT * FROM user
+    </select>
+
+    <select id="getUserById" parameterType="long" resultType="sorravit.example.springbootmybatisexample.model.User">
+        SELECT * FROM user WHERE id = #{id}
+    </select>
+</mapper>
